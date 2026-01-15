@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# --- AI Models (File nặng 1GB) ---
+*.h5
+*.keras
+*.tflite
+*.pt
+*.pkl
+# Chặn đích danh file của bạn cho chắc chắn
+casting_model_v1.h5
+
+# --- Docker ---
+.dockerignore
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- IDE ---
+.vscode/
+.idea/

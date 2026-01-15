@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ai-server:
+    build: .
+    container_name: casting-ai-container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./casting_model_v1.h5:/app/casting_model_v1.h5
+    restart: always
+    environment:
+      - TF_CPP_MIN_LOG_LEVEL=2
