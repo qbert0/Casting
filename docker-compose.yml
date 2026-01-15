@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ai-server:
+    image: banla007/casting-detector:v1.0 
+    container_name: casting-ai-container
+    ports:
+      - "8000:8000"
+    
+    volumes:
+      - ./APIAI/casting_model_v1.h5:/app/casting_model_v1.h5
+    
+    environment:
+      - TF_CPP_MIN_LOG_LEVEL=2
